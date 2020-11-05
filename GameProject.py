@@ -1,4 +1,6 @@
 #Version 0.0.1
+#Hasie Part
+
 
 def base_game():
     player_hand = 0
