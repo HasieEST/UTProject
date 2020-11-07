@@ -35,7 +35,7 @@ print(deal())
 
 def kokku(hand):
     total = 0
-    for card in hand
+    for card in hand:
         if card == "K" or card == "J" or card == "Q"
             total += 10
         elif card == "A":
