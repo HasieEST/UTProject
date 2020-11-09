@@ -21,12 +21,9 @@ def deal():
         if number == 3:
             random.shuffle(diamonds_deck)
             card = diamonds_deck.pop()
-            hand.append(card)
-           
-        if number == 4:
-            random.shuffle(spades_deck)
-            card = spades_deck.pop()
-            hand.append(card)
+            random.shuffle(diamond_deck)
+            card = diamond_deck.pop()
+
           
     return hand
     
