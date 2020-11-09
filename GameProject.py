@@ -36,10 +36,10 @@ print(deal())
 def kokku(hand):
     total = 0
     for card in hand:
-        if card == "K" or card == "J" or card == "Q":
+        if card == "K" or card == "J" or card == "Q"
             total += 10
         elif card == "A":
-            if total >= 11:
+            if total >= 11
                 total += 1
             else:
                 total += 11
@@ -47,22 +47,22 @@ def kokku(hand):
 
 def hit(hand):
     number = random.randint(1,4)
-        if number == 1
+        if number == 1:
             random.shuffle(hearts_deck)
             card = hearts_deck.pop()
             hand.append(card)
             
-        if number == 2
+        if number == 2:
             random.shuffle(pots_deck)
             card = pots_deck.pop()
             hand.append(card)
             
-        if number == 3
+        if number == 3:
             random.shuffle(diamond_deck)
             card = diamond_deck.pop()
             hand.append(card)
            
-        if number == 4
+        if number == 4:
             random.shuffle(spades_deck)
             card = spades_deck.pop()
             hand.append(card)         
