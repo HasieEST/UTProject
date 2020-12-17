@@ -1,4 +1,4 @@
-import random, Dealing
+import random, Dealing, turtle, graafika
 
 print("Kas soovite mängida panustega")
 kas_panustada = input("Jah, kui soovite.\n>>>>").lower()
