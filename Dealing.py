@@ -27,4 +27,7 @@ def käsi(x):
     kaardid = []
     for el in x:
         kaardid.append(el[0])
-          
+    kaardinimed = kaardid[0]
+    for i in kaardid[1:]:
+        kaardinimed = kaardinimed + ", " + i
+    return kaardinimed
