@@ -89,6 +89,8 @@ def reset_turtles():
 def create_card_image(hand, player):
     if player == "player":
         table_position = -1
+    elif player == "player":
+        table_position = -2
     elif player == "dealer":
         table_position = 1
     for card in hand:
