@@ -1,5 +1,15 @@
 import random, Dealing, turtle, graafika
 
+pliiats = turtle.Turtle()
+pliiats.hideturtle()
+pliiats.speed(0)
+pliiats.penup()
+pliiats.pensize(5)
+
+graafika.mänguala(pliiats)
+
+
+
 print("Kas soovite mängida panustega")
 kas_panustada = input("Jah, kui soovite.\n>>>>").lower()
 print("")
@@ -22,8 +32,11 @@ while mängib is True:
     dealer_score = 0
 
     dealer_hand.append(Dealing.draw(playing_deck))
+    graafika.create_card_image(dealer_hand, "dealer")
     player_hand.append(Dealing.draw(playing_deck))
+    graafika.create_card_image(player_hand, "player")
     player_hand.append(Dealing.draw(playing_deck))
+    graafika.create_card_image(player_hand, "player")
     player_score = Dealing.kokku(player_hand)
     print("Mängu alustav käsi: " + Dealing.käsi(player_hand))
     print("Mängu alustav skoor: " + str(player_score))
@@ -52,9 +65,12 @@ while mängib is True:
         spliting = input("Jah, kui soovite").lower()
         if spliting == "jah":
             player_hand2 = player_hand[1]
+            graafika.create_card_image(player_hand2, "player2")
             player_hand.remove(player2_hand)
             player_hand.append(Dealing.draw(playing_deck))
+            graafika.create_card_image(player_hand, "player")
             player_hand2.append(Dealing.draw(playing_deck))
+            graafika.create_card_image(player_hand2, "player2")
             player_panus2 = player_panus
             player_score = Dealing.kokku(player_hand)
             player_score2 = Dealing.kokku(player_hand2)
@@ -73,6 +89,7 @@ while mängib is True:
             print("")
             if tõmbamas == "jah":
                 player_hand.append(Dealing.draw(playing_deck))
+                graafika.create_card_image(player_hand, "player")
                 player_score = Dealing.kokku(player_hand)
                 if player_score > 21:
                     print("Esimene käsi hetkel: " + Dealing.käsi(player_hand))
@@ -89,6 +106,7 @@ while mängib is True:
                 print("")
                 if tõmbamas2 == "jah":
                     player_hand2.append(Dealing.draw(playing_deck))
+                    graafika.create_card_image(player_hand2, "player2")
                     player_score2 = Dealing.kokku(player_hand2)
                     if player_score2 > 21:
                         print("Teine käsi hetkel: " + Dealing.käsi(player_hand2))
@@ -103,9 +121,11 @@ while mängib is True:
                 elif tõmbamas2 == "hoia":
                     print("Nüüd võtab diiler kaardi.")
                     dealer_hand.append(Dealing.draw(playing_deck))
+                    graafika.create_card_image(dealer_hand, "dealer")
                     dealer_score = Dealing.kokku(dealer_hand)
                     while dealer_score < 16:
                         dealer_hand.append(Dealing.draw(playing_deck))
+                        graafika.create_card_image(dealer_hand, "dealer")
                         dealer_score = Dealing.kokku(dealer_hand)
                     print("Diileri käsi on hetkel:" + Dealing.käsi(dealer_hand))
                     print("Diileri käe skoor: "+ str(dealer_score)+"\n")
@@ -140,6 +160,7 @@ while mängib is True:
             print("")
             if tõmbamas == "jah":
                 player_hand.append(Dealing.draw(playing_deck))
+                graafika.create_card_image(player_hand, "player")
                 player_score = Dealing.kokku(player_hand)
                 if player_score > 21:
                     print("Teie käsi hetkel: " + Dealing.käsi(player_hand))
@@ -156,9 +177,11 @@ while mängib is True:
             elif tõmbamas == "hoia":
                 print("Nüüd võtab diiler kaardi.")
                 dealer_hand.append(Dealing.draw(playing_deck))
+                graafika.create_card_image(dealer_hand, "dealer")
                 dealer_score = Dealing.kokku(dealer_hand)
                 while dealer_score < 16:
                     dealer_hand.append(Dealing.draw(playing_deck))
+                    graafika.create_card_image(dealer_hand, "dealer")
                     dealer_score = Dealing.kokku(dealer_hand)
                 print("Diileri käsi on hetkel:" + Dealing.käsi(dealer_hand))
                 print("Diileri käe skoor: "+ str(dealer_score)+"\n")

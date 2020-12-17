@@ -64,8 +64,6 @@ pliiats.penup()
 pliiats.pensize(5)
 
 
-mänguala(pliiats)
-
 
 pakk = turtle.Turtle()
 pakk.penup()
