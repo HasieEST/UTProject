@@ -5,9 +5,7 @@ pliiats.hideturtle()
 pliiats.speed(0)
 pliiats.penup()
 pliiats.pensize(5)
-
 graafika.mänguala(pliiats)
-
 
 
 print("Kas soovite mängida panustega")
@@ -19,17 +17,18 @@ if kas_panustada == "jah":
 elif kas_panustada == "" or kas_panustada != "":
     panustamine = False
 
+
+
 mängib = True
 while mängib is True:
     playing_deck = [("Ärtu äss", 11, "hA.gif"),("Ärtu kaks", 2, "h2.gif"), ("Ärtu kolm", 3, "h3.gif"), ("Ärtu neli", 4, "h4.gif"), ("Ärtu viis", 5, "h5.gif"), ("Ärtu kuus", 6, "h6.gif"), ("Ärtu seitse", 7, "h7.gif"), ("Ärtu kaheksa", 8, "h8.gif"), ("Ärtu üheksa", 9, "h9.gif"), ("Ärtu kümme", 10, "h10.gif"), ("Ärtu poiss", 10, "hJ.gif"), ("Ärtu emand", 10, "hQ.gif"), ("Ärtu kuningas", 10, "hK.gif"),("Risti äss", 11, "clubsA.gif"),("Risti kaks", 2, "clubs2.gif"), ("Risti kolm", 3, "clubs3.gif"), ("Risti neli", 4, "clubs4.gif"), ("Risti viis", 5, "clubs5.gif"), ("Risti kuus", 6, "clubs6.gif"), ("Risti seitse", 7, "clubs7.gif"), ("Risti kaheksa", 8, "clubs8.gif"), ("Risti üheksa", 9, "clubs9.gif"), ("Risti kümme", 10, "clubs10.gif"), ("Risti poiss", 10, "clubsJ.gif"), ("Risti emand", 10, "clubsQ.gif"), ("Risti kuningas", 10, "clubsK.gif"),("Potti äss", 11, "spadesA.gif"),("Potti kaks", 2, "spades2.gif"), ("Potti kolm", 3, "spades3.gif"), ("Potti neli", 4, "spades4.gif"), ("Potti viis", 5, "spades5.gif"), ("Potti kuus", 6, "spades6.gif"), ("Potti seitse", 7, "spades7.gif"), ("Potti kaheksa", 8, "spades8.gif"), ("Potti üheksa", 9, "spades9.gif"), ("Potti kümme", 10, "spades10.gif"), ("Potti poiss", 10, "spadesJ.gif"), ("Potti emand", 10, "spadesQ.gif"), ("Potti kuningas", 10, "spadesK.gif"),("Ruutu äss", 11, "diaA.gif"),("Ruutu kaks", 2, "dia2.gif"), ("Ruutu kolm", 3, "dia3.gif"), ("Ruutu neli", 4, "dia4.gif"), ("Ruutu viis", 5, "dia5.gif"), ("Ruutu kuus", 6, "dia6.gif"), ("Ruutu seitse", 7, "dia7.gif"), ("Ruutu kaheksa", 8, "dia8.gif"), ("Ruutu üheksa", 9, "dia9.gif"), ("Ruutu kümme", 10, "dia10.gif"), ("Ruutu poiss", 10, "diaJ.gif"), ("Ruutu emand", 10, "diaQ.gif"), ("Ruutu kuningas", 10, "diaK.gif")]
 
-    #diiler ja mängija andmed
     player_hand = []
     player_score = 0
     player2_hand = []
     player2_score = 0
     dealer_hand = []
-    dealer_score = 0
+    dealer_score = 0  
     graafika.reset_turtles()
 
     dealer_hand.append(Dealing.draw(playing_deck))
